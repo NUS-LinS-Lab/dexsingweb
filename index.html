@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MetaFold</title>
+    <title>DexSing</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="author" content="Anonymous">
@@ -47,12 +47,12 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">MetaFold: Language-Guided Multi-Category Garment Folding Framework
-                via Trajectory Generation and Foundation Model</h1>
+              <h1 class="title is-1 publication-title">Learning Synergistic Dexterous Singulation in Cluttered Environments</h1>
 
               <div class="is-size-5 publication-authors">
                 <div>
-                  Anonymous
+                  Lixin Xu, Zhewei Gui, Zixuan Liu, Zeyu Jiang, Zixuan Liu, <br>
+                  Jingxiang Guo, Zhixuan Xu, Chongkai Gao, Zhixuan Xu, Lin Shao
                 </div>
               </div>
 
@@ -116,7 +116,7 @@
       <div class="container is-max-desktop">
         <div class="hero-body">
           <video id="intro" controls playsinline height="100%">
-            <source src="./static/data/MetaFold.mp4" type="video/mp4">
+            <source src="./static/data/DexSing.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -131,9 +131,7 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Garment folding is a common yet challenging task in robotic manipulation. The deformability of garments leads to a vast state space and complex dynamics and complicates precise fine-grained manipulation.
-Previous approaches often rely on predefined key points or demonstrations,
-constraining their generalizability across diverse garment categories. This paper presents a framework, \textbf{MetaFold}, that disentangles task planning from action prediction, learning each independently to enhance model generalization. It employs language-guided point cloud trajectory generation for task planning and a low-level foundation model for action prediction. This structure facilitates multi-category learning, enabling the model to adapt flexibly to various user instructions and folding tasks. Experimental results  demonstrate our proposed framework's superiority. 
+                Grasping objects in cluttered environments remains a fundamental yet challenging problem in robotic manipulation. While prior works have explored learning-based synergies for two-fingered grippers, few works leverage high degrees of freedom (DoF) of dexterous hands for synegistic singulation in cluttered environments. In this work, we propose DexSing, a synergistic dexterous singulation policy using reinforcement learning, which enables to perform singulation for grasping with high dexterity, thus significantly improving grasping efficiency in cluttered environments. We incorporate curriculum learning to enhance success rate and generalization across diverse clutter conditions and employ policy distillation to obtain a deployable vision-based grasping strategy. To evaluate our approach, we introduce a set of cluttered grasping tasks with varying object arrangements and occlusion levels. Experimental results demonstrate that our method outperforms baselines in terms of efficiency and grasping success rate, particularly in dense clutter.
               </p>
             </div>
           </div>
@@ -146,8 +144,8 @@ constraining their generalizability across diverse garment categories. This pape
             <h2 class="title is-3">Pipeline Overview</h2>
             <div class="content has-text-justified">
               <figure>
-                <img src="./static/data/MetaFold_overview.jpg" alt="Overview of MetaFold framework image">
-                <figcaption style="font-style: normal; font-size: 0.95em;">Overview of MetaFold TODO.</figcaption>
+                <img src="./static/data/DexSing_overview.jpg" alt="Overview of DexSing framework image">
+                <figcaption style="font-style: normal; font-size: 0.95em;">Overview of DexSing TODO.</figcaption>
               </figure>
             </div>
           </div>
@@ -157,9 +155,9 @@ constraining their generalizability across diverse garment categories. This pape
     </section>
 
     <!-- BibTex -->
-    <section class="section" id="BibTeX">
-      TODO
-    </section>
+    <!-- <section class="section" id="BibTeX"> -->
+      <!-- TODO -->
+    <!-- </section> -->
     <!--/ BibTex -->
 
     <!-- Footer -->
