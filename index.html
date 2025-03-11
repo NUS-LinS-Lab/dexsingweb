@@ -90,7 +90,7 @@
                       <span class="icon">
                         <i class="fab fa-github"></i>
                       </span>
-                      <span>Code</span>
+                      <span>Code(Coming Soon)</span>
                     </a>
                   </span>
 
@@ -100,7 +100,7 @@
                       <span class="icon">
                         <i class="fas fa-database"></i>
                       </span>
-                      <span>Data</span>
+                      <span>Dataset(Coming Soon)</span>
                     </a>
                   </span>
                 </div>
@@ -131,7 +131,9 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Grasping objects in cluttered environments remains a fundamental yet challenging problem in robotic manipulation. While prior works have explored learning-based synergies for two-fingered grippers, few works leverage high degrees of freedom (DoF) of dexterous hands for synegistic singulation in cluttered environments. In this work, we propose DexSing, a synergistic dexterous singulation policy using reinforcement learning, which enables to perform singulation for grasping with high dexterity, thus significantly improving grasping efficiency in cluttered environments. We incorporate curriculum learning to enhance success rate and generalization across diverse clutter conditions and employ policy distillation to obtain a deployable vision-based grasping strategy. To evaluate our approach, we introduce a set of cluttered grasping tasks with varying object arrangements and occlusion levels. Experimental results demonstrate that our method outperforms baselines in terms of efficiency and grasping success rate, particularly in dense clutter.
+                Grasping objects in cluttered environments remains a fundamental yet challenging problem in robotic manipulation. While prior works have explored learning-based synergies between pushing and grasping for two-fingered grippers, few have leveraged the high degrees of freedom (DoF) in dexterous hands to perform efficient singulation for grasping in cluttered settings. 
+                In this work, we introduce DexSinGrasp, a unified policy for dexterous object singulation and grasping. DexSinGrasp enables high-dexterity object singulation to facilitate grasping, significantly improving efficiency and effectiveness in cluttered environments. We incorporate curriculum learning to enhance success rates and generalization across diverse clutter conditions, while policy distillation enables a deployable vision-based grasping strategy. 
+                To evaluate our approach, we introduce a set of cluttered grasping tasks with varying object arrangements and occlusion levels. Experimental results show that our method outperforms baselines in both efficiency and grasping success rate. Experimental results show that our method outperforms baselines in both efficiency and grasping success rate, particularly in dense clutter. Codes, appendix, and videos are available on our project website https://nus-lins-lab.github.io/dexsingweb/.
               </p>
             </div>
           </div>
@@ -148,7 +150,8 @@
             <div class="content has-text-justified">
               <figure>
                 <img src="./static/data/overview.png" alt="Overview of DexSinGrasp framework image">
-                <figcaption style="font-style: normal; font-size: 0.95em;">Framework of DexSinGrasp. First, cluttered environments are generated for the following training. Curriculum learning is then leveraged to reduce the difficulty of training state-based teacher policies. Finally, the vision-based student policy is distilled from teacher policies for deployment on a real robot.</figcaption>
+                <figcaption style="font-style: normal; font-size: 0.95em;">Framework of DexSinGrasp. Firstly, we employ clutter arrangement curriculum learning to progressively improve our teacher policy's performance, and acquire two teacher policies at the end of this stage for dense and random arrangement tasks, respectively.
+                  We then collect various state and action data along with pointcloud data from the trained two teachers to train a vision-based student policy via behavior cloning, which better facilitates real-world deployment.</figcaption>
               </figure>
             </div>
             <div class="content has-text-justified">
@@ -193,7 +196,7 @@
               <div class="columns is-centered is-gapless">
                 <div class="column">
                   <figure>
-                    <img src="#" alt="Dense 4 objects" style="width: 90%;">
+                    <img src="./static/data/d4.gif" alt="Dense 4 objects" style="width: 90%;">
                     <figcaption style="font-style: normal; font-size: 0.95em;">Dense arrangement with 4 obstacles</figcaption>
                   </figure>
                 </div>
@@ -214,7 +217,7 @@
               <div class="columns is-centered is-gapless">
                 <div class="column">
                   <figure>
-                    <img src="#" alt="Random 4 objects" style="width: 90%;">
+                    <img src="./static/data/r4.gif" alt="Random 4 objects" style="width: 90%;">
                     <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement with 4 obstacles</figcaption>
                   </figure>
                 </div>
