@@ -47,14 +47,7 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">DexSinGrasp: Learning a Unified Policy for Dexterous Object Singulation and Grasping in Cluttered Environments</h1>
-
-<!--               <div class="is-size-5 publication-authors">
-                <div>
-                  Lixin Xu, Zixuan Liu, Zhewei Gui, Jingxiang Guo, <br>
-                  Zeyu Jiang, Zhixuan Xu, Chongkai Gao, Lin Shao
-                </div>
-              </div> -->
+              <h1 class="title is-1 publication-title">DexSinGrasp: Learning a Unified Policy for Dexterous Object Singulation and Grasping in Densely Cluttered Environments</h1>
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
@@ -72,6 +65,9 @@
                 <br>
                 <span class="author-block">
                   <a href=" https://the-masses.github.io">Zeyu Jiang</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Tongzhou Zhang<sup>1</sup>,
                 </span>
                 <span class="author-block">
                   <a href="https://ariszxxu.github.io/">Zhixuan Xu</a><sup>1</sup>,
@@ -96,22 +92,7 @@
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <!-- PDF Link -->
-                  <span class="link-block">
-                    <a href="https://arxiv.org/abs/2504.04516" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a href="https://arxiv.org/pdf/2504.04516" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
+                  
                   <!-- Appendix Link -->
                   <!-- <span class="link-block">
                     <a href="#" class="external-link button is-normal is-rounded is-dark">
@@ -124,7 +105,7 @@
 
                   <!-- Code Link -->
                   <span class="link-block">
-                    <a href="https://github.com/DavidLXu/DexSinGrasp" class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://github.com/dexsingrasp/DexSinGrasp" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fab fa-github"></i>
                       </span>
@@ -134,11 +115,21 @@
 
                   <!-- Dataset Link -->
                   <span class="link-block">
-                    <a href="https://drive.google.com/drive/folders/1M9oJu6zA6MXZm61Q_IGhJHt6kUTWsOJL?usp=sharing" class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://drive.google.com/drive/folders/11bnYTruEzQT9sb7icceS9ndSg-42Kct8?usp=drive_link" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-database"></i>
                       </span>
                       <span>Data</span>
+                    </a>
+                  </span>
+
+                  <!-- Video Link -->
+                  <span class="link-block">
+                    <a href="https://dexsingrasp.github.io/dexsingrasp-web/static/data/DexSinGrasp.mp4" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-video"></i>
+                      </span>
+                      <span>Video</span>
                     </a>
                   </span>
                 </div>
@@ -171,14 +162,20 @@
               <p>
                 Grasping objects in cluttered environments remains a fundamental yet challenging problem in robotic manipulation. While prior works have explored learning-based synergies between pushing and grasping for two-fingered grippers, few have leveraged the high degrees of freedom (DoF) in dexterous hands to perform efficient singulation for grasping in cluttered settings. 
                 In this work, we introduce DexSinGrasp, a unified policy for dexterous object singulation and grasping. DexSinGrasp enables high-dexterity object singulation to facilitate grasping, significantly improving efficiency and effectiveness in cluttered environments. We incorporate clutter arrangement curriculum learning to enhance success rates and generalization across diverse clutter conditions, while policy distillation enables a deployable vision-based grasping strategy. 
-                To evaluate our approach, we introduce a set of cluttered grasping tasks with varying object arrangements and occlusion levels. Experimental results show that our method outperforms baselines in both efficiency and grasping success rate. Experimental results show that our method outperforms baselines in both efficiency and grasping success rate, particularly in dense clutter. Codes, appendix, and videos are available on our project website https://nus-lins-lab.github.io/dexsingweb/.
+                To evaluate our approach, we introduce a set of cluttered grasping tasks with varying object arrangements and occlusion levels. Experimental results show that our method outperforms baselines in both efficiency and grasping success rate. Experimental results show that our method outperforms baselines in both efficiency and grasping success rate, particularly in dense clutter. Codes, appendix, and videos are available on our <a href="https://dexsingrasp.github.io/dexsingrasp-web/">project website</a>.
               </p>
             </div>
           </div>
         </div>
         <!--/ Abstract -->
 
-
+        <div class="content has-text-justified">
+          <figure>
+            <img src="./static/data/qualitative.png" alt="qualitative results" style="width: 60%;">
+            <!-- <figcaption style="font-style: normal; font-size: 0.95em;">Framework of DexSinGrasp. Firstly, we employ clutter arrangement curriculum learning to progressively improve our teacher policy's performance, and acquire two teacher policies at the end of this stage for dense and random arrangement tasks, respectively. -->
+              <!-- We then collect various state and action data along with pointcloud data from the trained two teachers to train a vision-based student policy via behavior cloning, which better facilitates real-world deployment.</figcaption> -->
+          </figure>
+        </div>
 
 
         <!-- Overview -->
@@ -202,7 +199,7 @@
         <!--/ Overview -->
 
         <!-- Cluttered Environments -->
-        <div class="columns is-centered has-text-centered">
+        <!-- <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Cluttered Environments Generation</h2>
             <div class="content has-text-justified">
@@ -221,7 +218,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
         <!--/ Cluttered Environments -->
 
 
@@ -229,25 +226,53 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Simulation Experiments</h2>
+            
+            <div class="columns is-centered has-text-centered">
+              <!-- <div class="column is-four-fifths"> -->
+
+                <div class="content has-text-justified">
+                  <p>
+                  We evaluate our teacher and student policies and compare them with GraspReward-only and Multi-state singulation baselines. The evaluation metrics are success rates denoted by SR, and average steps denoted by AS. We denote dense and random arrangement as D-n and R-n respectively, where n is the number of obstacles.
+
+                  </p>
+                </div>
+              <!-- </div> -->
+            </div>
+            
+            <div class="columns is-centered is-gapless">
+              <div class="column">
+                <figure>
+                  <img src="./static/data/exp_succ_rate.png" alt="" style="width: 100%;">
+                  <figcaption style="font-style: normal; font-size: 0.95em;">Success Rate</figcaption>
+                </figure>
+              </div>
+              <div class="column">
+                <figure>
+                  <img src="./static/data/exp_avg_step.png" alt="" style="width: 100%;">
+                  <figcaption style="font-style: normal; font-size: 0.95em;">Average Steps</figcaption>
+                </figure>
+              </div>
+            </div>
+
             <div class="content has-text-justified">
               <!-- First row -->
               <div class="columns is-centered is-gapless">
                 <div class="column">
                   <figure>
-                    <img src="./static/data/d4.gif" alt="Dense 4 objects" style="width: 90%;">
-                    <figcaption style="font-style: normal; font-size: 0.95em;">Dense arrangement<br>with 4 obstacles</figcaption>
+                    <img src="./static/data/new_d4.gif" alt="Dense 4 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">D-4</figcaption>
                   </figure>
                 </div>
                 <div class="column">
                   <figure>
-                    <img src="./static/data/d6.gif" alt="Dense 6 objects" style="width: 90%;">
-                    <figcaption style="font-style: normal; font-size: 0.95em;">Dense arrangement<br>with 6 obstacles</figcaption>
+                    <img src="./static/data/new_d6.gif" alt="Dense 6 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">D-6</figcaption>
                   </figure>
                 </div>
                 <div class="column">
                   <figure>
-                    <img src="./static/data/d8.gif" alt="Dense 8 objects" style="width: 90%;">
-                    <figcaption style="font-style: normal; font-size: 0.95em;">Dense arrangement<br>with 8 obstacles</figcaption>
+                    <img src="./static/data/new_d8.gif" alt="Dense 8 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">D-8</figcaption>
                   </figure>
                 </div>
               </div>
@@ -255,84 +280,310 @@
               <div class="columns is-centered is-gapless">
                 <div class="column">
                   <figure>
-                    <img src="./static/data/r4.gif" alt="Random 4 objects" style="width: 90%;">
-                    <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement<br>with 4 obstacles</figcaption>
+                    <img src="./static/data/new_r4.gif" alt="Random 4 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">R-4</figcaption>
                   </figure>
                 </div>
                 <div class="column">
                   <figure>
-                    <img src="./static/data/r6.gif" alt="Random 6 objects" style="width: 90%;">
-                    <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement<br>with 6 obstacles</figcaption>
+                    <img src="./static/data/new_r6.gif" alt="Random 6 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">R-6</figcaption>
                   </figure>
                 </div>
                 <div class="column">
                   <figure>
-                    <img src="./static/data/r8.gif" alt="Random 8 objects" style="width: 90%;">
-                    <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement<br>with 8 obstacles</figcaption>
+                    <img src="./static/data/new_r8.gif" alt="Random 8 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">R-8</figcaption>
                   </figure>
                 </div>
               </div>
             </div>
+
+            
+
             <div class="content has-text-justified">
               <p>
-                
+                To test generalization beyond cuboid clutters, we evaluate our policy on tightly packed irregular clutters formed by slicing a cuboid with random curves. After fine-tuning on 200 cases, we test on 50 unseen ones and achieve satisfactory results compared with baselines. 
+
               </p>
             </div>
+
+            <div class="columns is-centered is-gapless">
+              <!-- <div class="column">
+                <figure>
+                  <img src="./static/data/irregular_gen.png" alt="" style="width: 98%;">
+                  <figcaption style="font-style: normal; font-size: 0.95em;">Irregular Clutter Generation</figcaption>
+                </figure>
+              </div> -->
+              <div class="column">
+                <figure>
+                  <img src="./static/data/new_irr1.gif" alt="" style="width: 90%;">
+                  <figcaption style="font-style: normal; font-size: 0.95em;">Irregular Clutter 1</figcaption>
+                </figure>
+              </div>
+              <div class="column">
+                <figure>
+                  <img src="./static/data/new_irr2.gif" alt="" style="width: 90%;">
+                  <figcaption style="font-style: normal; font-size: 0.95em;">Irregular Clutter 2</figcaption>
+                </figure>
+              </div>
+              <div class="column">
+                <figure>
+                  <img src="./static/data/new_irr3.gif" alt="" style="width: 90%;">
+                  <figcaption style="font-style: normal; font-size: 0.95em;">Irregular Clutter 3</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            
+
+            <!-- <div class="columns is-centered is-gapless">
+              <div class="column">
+                <figure>
+                  <img src="./static/data/irregular_exp.png" alt="" style="width: 50%;">
+                  <figcaption style="font-style: normal; font-size: 0.95em;">Evaluation on Irregular Clutter</figcaption>
+                </figure>
+              </div>
+            </div> -->
           </div>
         </div>
         <!--/ Simulation Results -->
+
+
+
+        
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Discussion on Dexterity</h2>
+            
+            <div class="columns is-centered has-text-centered">
+              <!-- <div class="column is-four-fifths"> -->
+
+                <div class="content has-text-justified">
+                  <p>
+                    We evaluate three LEAP Hand variants—Low, Mid, and Full DoF—on dense and irregular clutters. As dexterity increases from 6 to 16 DoF, grasp success improves significantly, highlighting the importance of high-DoF hands in tight clutter scenarios. 
+                    Note that (F) stands for Flexion & Extension DoF, (A) stands for Abduction & Adduction DoF.
+                    One single arrow represents one DoF in the Figure.
+                    
+                  </p>
+                </div>
+              <!-- </div> -->
+            </div>
+
+
+            <div class="content has-text-justified">
+
+              <div class="columns is-centered is-gapless">
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/full_dof.gif" alt="Full DoF LEAP Hand" style="width: 100%;">
+                    <!-- <figcaption style="font-style: normal; font-size: 0.95em;">Full DoF LEAP Hand</figcaption> -->
+                  </figure>
+                </div>
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/mid_dof.gif" alt="Mid DoF LEAP variant" style="width: 100%;">
+                    <!-- <figcaption style="font-style: normal; font-size: 0.95em;">Mid DoF LEAP variant</figcaption> -->
+                  </figure>
+                </div>
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/low_dof.gif" alt="Low DoF LEAP variant" style="width: 100%;">
+                    <!-- <figcaption style="font-style: normal; font-size: 0.95em;">Low DoF LEAP variant</figcaption> -->
+                  </figure>
+                </div>
+              </div>
+              <!-- First row -->
+              <div class="columns is-centered is-gapless">
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/full_dof.png" alt="Full DoF LEAP Hand" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Full DoF LEAP Hand</figcaption>
+                  </figure>
+                </div>
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/mid_dof.png" alt="Mid DoF LEAP variant" style="width: 90%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Mid DoF LEAP variant</figcaption>
+                  </figure>
+                </div>
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/low_dof.png" alt="Low DoF LEAP variant" style="width: 90%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Low DoF LEAP variant</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <!-- Second row -->
+              <div class="columns is-centered is-gapless">
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/dexterity_succ.png" alt="" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Success Rate on Embodiments with different DoFs</figcaption>
+                  </figure>
+                </div>
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/dexterity_avg.png" alt="" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Average Steps on Embodiments with different DoFs</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Real-World Results -->
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Real-World Experiments</h2>
+
+            <div class="columns is-centered has-text-centered">
+              <!-- <div class="column is-four-fifths"> -->
+
+                <div class="content has-text-justified">
+                  <p>
+                    We evaluate our policy on D-8, R-8, irregular, and practical clutters with 10 real-world trials per setting, where success is defined as lifting the target by 10 cm within 40 seconds. Despite no extensive sim-to-real adaptation, the policy shows strong performance, though affected by dynamic interactions and sim-to-real discrepancies. Notably, the R-8 policy achieves 60% success on practical clutters in a zero-shot setting, demonstrating robust generalization to unseen object shapes and spatial configurations.
+                  </p>
+                </div>
+              <!-- </div> -->
+            </div>
+            
+
+
+
             <div class="content has-text-justified">
-              <!-- First row -->
+
               <div class="columns is-centered is-gapless">
                 <div class="column">
                   <figure>
-                    <img src="./static/data/D4-r.gif" alt="Dense 4 objects" style="width: 90%;">
+                    <img src="./static/data/top_view.png" alt="Dense 8 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">The target object is placed in the center of the clutter, as encompassed by light green dashes. The first row of clutters are used for evaluation. Results are shown in the following table. </figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              <!-- First row -->
+              <div class="columns is-centered is-gapless">
+                <!-- <div class="column">
+                  <figure>
+                    <img src="./static/data/D4-r.gif" alt="Dense 4 objects" style="width: 100%;">
                     <figcaption style="font-style: normal; font-size: 0.95em;">Dense arrangement<br>with 4 obstacles</figcaption>
                   </figure>
-                </div>
+                </div> -->
+                <!-- <div class="column">
+                  <figure>
+                    <img src="./static/data/D6-r.gif" alt="Dense 6 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Dense arrangement<br>with 6 obstacles</figcaption>
+                  </figure>
+                </div> -->
                 <div class="column">
                   <figure>
-                    <img src="./static/data/D6-r.gif" alt="Dense 6 objects" style="width: 90%;">
-                    <figcaption style="font-style: normal; font-size: 0.95em;">Dense arrangement<br>with 6 obstacles</figcaption>
+                    <img src="./static/data/D8-r.gif" alt="Dense 8 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Dense arrangement<br>with 8 obstacles</figcaption>
                   </figure>
                 </div>
                 <div class="column">
                   <figure>
-                    <img src="./static/data/D8-r.gif" alt="Dense 8 objects" style="width: 90%;">
-                    <figcaption style="font-style: normal; font-size: 0.95em;">Dense arrangement<br>with 8 obstacles</figcaption>
+                    <img src="./static/data/R8-r.gif" alt="Dense 8 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement<br>with 8 obstacles</figcaption>
                   </figure>
                 </div>
               </div>
 
               <!-- Second row -->
               <div class="columns is-centered is-gapless">
-                <div class="column">
+                <!-- <div class="column">
                   <figure>
-                    <img src="./static/data/R4-r.gif" alt="Dense 4 objects" style="width: 90%;">
+                    <img src="./static/data/R4-r.gif" alt="Dense 4 objects" style="width: 100%;">
                     <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement<br>with 4 obstacles</figcaption>
                   </figure>
-                </div>
-                <div class="column">
+                </div> -->
+                <!-- <div class="column">
                   <figure>
-                    <img src="./static/data/R6-r.gif" alt="Dense 6 objects" style="width: 90%;">
+                    <img src="./static/data/R6-r.gif" alt="Dense 6 objects" style="width: 100%;">
                     <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement<br>with 6 obstacles</figcaption>
                   </figure>
-                </div>
+                </div> -->
+
                 <div class="column">
                   <figure>
-                    <img src="./static/data/R8-r.gif" alt="Dense 8 objects" style="width: 90%;">
-                    <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement<br>with 8 obstacles</figcaption>
+                    <img src="./static/data/irr_loop.gif" alt="Dense 8 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Irregular clutter</figcaption>
+                  </figure>
+                </div>
+                
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/prac1_loop.gif" alt="Dense 8 objects" style="width: 100%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Practical clutter</figcaption>
                   </figure>
                 </div>
               </div>
+
+
+              
+
+              <!-- Second row -->
+              <div class="columns is-centered is-gapless">
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/real_world_rate.png" alt="" style="width: 70%;">
+                    <figcaption style="font-style: normal; font-size: 0.95em;">Real-World Grasping Success Rate</figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              
+
+              <div class="columns">
+                <!-- <div class="column is-four-fifths"> -->
+  
+                  <div class="content has-text-justified">
+                    <p>
+                      We tested on more diverse practical clutters as shown below.
+                    </p>
+                  </div>
+                <!-- </div> -->
+              </div>  
+
+
+              <div class="columns is-centered is-gapless">
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/prac2_loop.gif" alt="Dense 4 objects" style="width: 100%;">
+                    <!-- <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement<br>with 4 obstacles</figcaption> -->
+                  </figure>
+                </div>
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/prac3_loop.gif" alt="Dense 6 objects" style="width: 100%;">
+                    <!-- <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement<br>with 6 obstacles</figcaption> -->
+                  </figure>
+                </div>
+              </div>
+              <div class="columns is-centered is-gapless">
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/prac4_loop.gif" alt="Dense 8 objects" style="width: 100%;">
+                    <!-- <figcaption style="font-style: normal; font-size: 0.95em;">Random arrangement<br>with 8 obstacles</figcaption> -->
+                  </figure>
+                </div>
+                <div class="column">
+                  <figure>
+                    <img src="./static/data/prac5_loop.gif" alt="Dense 8 objects" style="width: 100%;">
+                    <!-- <figcaption style="font-style: normal; font-size: 0.95em;">Practical clutter</figcaption> -->
+                  </figure>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
+
+
+
+        <!--/ Simulation Results -->
         <!--/ Real-World Results -->
         <!--/
         <div class="columns is-centered has-text-centered">
@@ -356,18 +607,7 @@
       </div>
     </section>
 
-    
-    <section class="section" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <h2 class="title is-3">BibTeX</h2>
-        <pre><code>@article{xu2025dexsingrasp,
-    title={DexSinGrasp: Learning a Unified Policy for Dexterous Object Singulation and Grasping in Cluttered Environments},
-    author={Xu, Lixin and Liu, Zixuan and Gui, Zhewei and Guo, Jingxiang and Jiang, Zeyu and Xu, Zhixuan and Gao, Chongkai and Shao, Lin},
-    journal={arXiv preprint},
-    year={2025}
-}</code></pre>
-      </div>
-    </section>
+  
 
 
     <!-- Footer -->
@@ -395,3 +635,5 @@
 
   </body>
 </html>
+
+
